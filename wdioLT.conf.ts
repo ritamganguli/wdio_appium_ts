@@ -1,6 +1,6 @@
 exports.config = {
     user:"ritamg",
-    key: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG",
+    key: "bhul_gaya",
   
     updateJob: false,
     specs: ["./specs/**/android-test.ts"],
