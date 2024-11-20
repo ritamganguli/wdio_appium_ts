@@ -1,0 +1,28 @@
+version: 0.2
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+runson: android
+autosplit: true
+concurrency: 2
+pre:
+  - npm install
+cacheKey: '{{ checksum "package.json" }}'
+cacheDirectories:
+  - node_modules
+framework:
+  name: appium
+  args:
+    region: us
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr 'describe' specs
+testRunnerCommand: npx wdio wdioLT.conf.ts --spec $test
+
+
+
+
+
+
+
